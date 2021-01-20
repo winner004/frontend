@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    var number=2
+    var obj={
+        number:4,
+        fn1:(function () {
+            this.number*=2
+            var number=3;
+            return function () {
+                this.number*=2
+                number*=3
+                alert(number)
+            }
+        })()
+    }
+
+    var fn1=obj.fn1;
+    alert(number); //4   首先是全局的number   通过里面的this.number*=2  得到4
+    fn1();   //9   obj中的fn1的匿名函数自调，所以是立即执行的  里面return闭包的局部变量是3，所以 number*=3  得到9  这是全局number是8
+    obj.fn1();  //这里是obj.  所以this是obj中的4  this.number*2=8   number*=3 输出的是27
+    // alert(window.number);//8  这个是上面fn1（）得到的8
+    // obj(obj.number);//8   这个是obj中的number*2=8
+
+</script>
+</html>

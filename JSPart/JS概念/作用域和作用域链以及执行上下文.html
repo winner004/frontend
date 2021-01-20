@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // https://www.bilibili.com/video/BV1LJ41157AF?from=search&seid=13915545578418531575
+    //https://blog.csdn.net/weixin_40387601/article/details/80515665
+    //作用域（作用域通常有n+1个   n代表多少个函数，1代表全局作用域）
+    // 作用域分为全局作用域和函数作用域  js没有块作用域（es6中才有了）
+    // 作用域可以隔离变量 不同作用域下同名变量不会冲突  （变量都是一层一层通过作用域链向外找的）
+    //作用域链：多个上下级关系的作用域形成的链 它的方向是从下到上（从内到外的） 查找变量就是按照作用域链来找
+    var a=1
+    function fn1() {
+        var b=2
+        function fn2() {
+            var c=3
+            console.log(a)
+            console.log(b)
+            console.log(c)
+            console.log(d)
+        }
+        fn2()
+    }
+    fn1()
+
+    //执行上下文
+    //每个函数都会创建自己的作用域  作用域在在函数定义时就创建了 是静态的
+    //执行上下文是在作用域确定之后，函数调用之前创建的  是动态的   （函数调用时创建  函数结束时上下文就被自动释放了）
+</script>
+</html>

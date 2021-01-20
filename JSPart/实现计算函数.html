@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // var number=function(n){
+    //     return n
+    // }
+    //为什么(5)知道是Number的呢？  https://www.runoob.com/jsref/jsref-prototype-num.html
+    Number.prototype.add=function (n) {
+        return this+n;
+    }
+    Number.prototype.minus=function (n) {
+        return this-n;
+    }
+    console.log((5).add(3).minus(2))
+</script>
+</html>

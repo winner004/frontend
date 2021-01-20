@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #nav{
+            width: 100%;
+            height: 100px;
+            background-color: #00b8d6;
+        }
+        #home_content{
+            width: 100%;
+            height: 450px;
+            background-color: red;
+        }
+        #about_content{
+            width: 100%;
+            height: 450px;
+            background-color: green;
+        }
+    </style>
+    <script src="../shequ/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div id="nav"><span id="home">首页</span>&nbsp;<span id="about">关于我们</span></div>
+<div id="home_content"></div>
+<div id="about_content"></div>
+<input type="button" id="btn" value="submit">
+</body>
+<script>
+
+    // https://www.cnblogs.com/shiyh/p/8891139.html
+    //https://www.bilibili.com/video/BV16f4y1S7DD?from=search&seid=16240103625058962516
+
+    // 合成事件hover 里面有两个方法 enter  leave
+    // $("#home").hover(function () {
+    //     $("#home_content").show();
+    //     $("#about_content").hide();
+    // },function () {
+    //     $("#home_content").hide();
+    //     $("#about_content").show();
+    // })
+    //
+    // $("#about").hover(function () {
+    //     $("#home_content").hide();
+    //     $("#about_content").show();
+    // })
+    //jq初始化 三种方式
+    // $(document).ready(function () {
+    //    
+    // })
+    // $().ready(function () {
+    //    
+    // })
+    // $(function () {
+    //    
+    // })
+
+    //事件绑定      js和jq事件的区别：一般都是多一个on，例如  js  onclick 、onfocus    jq  click、focus
+    // $(function () {
+    //     $('#btn').bind('click',function () {
+    //         console.log("我被点击了")
+    //     })
+    // })
+    // bind简写
+    // $(function () {
+    //     $("#btn").click(function () {
+    //         console.log("bind again")
+    //     })
+    // })
+</script>
+</html>

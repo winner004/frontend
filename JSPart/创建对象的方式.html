@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 字面量的方式  属性用冒号链接的
+    // var person={
+    //     name:"张三",
+    //     age:19,
+    //     say:function () {
+    //         console.log("Hello");
+    //     }
+    // }
+
+    //new创建对象的方式
+    // var person=new Object();
+    // person.name="李四";
+    // person.age=13;
+    // person.say=function () {
+    //     console.log("Hello");
+    // }
+
+    //构造函数
+    function person(name,age) {
+        this.name=name;
+        this.age=age;
+        this.say=function () {
+            console.log("Hello")
+        }
+    }
+    var p1=new person("王五",12)
+</script>
+</html>

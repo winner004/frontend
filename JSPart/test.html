@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="product-box" class="widget-box">
+    <div class="widget-title">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#tab1">基本信息</a></li>
+            <li><a data-toggle="tab" href="#tab2">猜你喜欢</a></li>
+            <li><a data-toggle="tab" href="#tab3">文件确权资料</a></li>
+        </ul>
+    </div>
+    <div class="widget-content tab-content"  style="border-bottom: none;">
+        <div id="tab1" class="tab-pane active">
+            <div id="role-dialog" class="container-fluid">
+                <div class="row-fluid" style="padding:0px 0px 0px; margin-bottom:7px;">
+                    <div class="span12">
+                        <form id="product-form" action="${action}" method="post" class="form-horizontal" >
+                            <input type="hidden" name="id" value="${id}"/>
+                            <div class="control-group">
+                                <div class="span6">
+                                    <label class="control-label">产品管理</label>
+                                    <div class="controls" >
+                                        <input type="text" name="title" value="${title}" placeholder="请输入产品管理名称"/>
+                                    </div>
+                                </div>
+                                <div class="span6">
+                                    <label class="control-label">上传日期</label>
+                                    <div class="controls" >
+                                        <input type="text" name="add_date" value="${add_date}" placeholder="请输入上传日期"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">图片类型</label>
+                                <div class="controls" >
+                                    <input type="text" name="sort" value="${sort}"  placeholder="请输入图片类型"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">文件类型</label>
+                                <div class="controls" >
+                                    <input type="text" name="sort" value="${sort}"  placeholder="请输入文件类型"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">应用场景</label>
+                                <div class="controls" >
+                                    <input type="text" name="sort" value="${sort}"  placeholder="请输入应用场景"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">是否显示</label>
+                                <div class="controls" >
+                                    <!--<input type="checkbox" id="iservice" name="iservice" value="${iservice}"/>-->
+                                    <input type="checkbox" id="is_show" is_show="0"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab2" class="tab-pane">This is a Tab Two Content</div>
+        <div id="tab3" class="tab-pane">This is a Tab Three Content</div>
+    </div>
+</div>
+</body>
+</html>

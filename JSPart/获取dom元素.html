@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="ipt_id" name="ipt_name" class="ipt_class">
+</body>
+<script type="text/javascript" src="../shequ/js/jquery-1.11.1.min.js"></script>
+<script>
+    // js方式
+    //注意：id只有一个所以是直接取 ;而 name 、class、tagName可能对应多个所以这里要写[0],表示去的第一个。
+    document.getElementById("ipt_id");
+    document.getElementsByName("ipt_name")[0];
+    document.getElementsByClassName("ipt_class")[0];
+    document.getElementsByTagName("input")[0];
+    //jq方式
+    $("#ipt_id").get(0);
+    $(".ipt_class").get(0);
+    $("input").get(0);
+</script>
+</html>

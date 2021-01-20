@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    //https://www.cnblogs.com/shaofl/p/10521660.html
+    var obj={1:222, 2:123, 5:888}
+    //最后通过.slice(1)去除掉index为0的一个值，但是数组长度就和要求得到的结果不匹配了，所以通过如下index+1得到数组更靠谱
+    // function convert(obj) { return Array.from({ length: 12 }).map((item, index) => obj[index] || null).slice(1);}
+    // var ar=convert({1:222, 2:123, 5:888})
+    // console.log(ar)
+    //首先用form创建一个长度为12的数组，再通过map函数的index遍历数组，放入存在的值，最后通过return返回的，要定义一个函数接一下
+    function convert(obj) { return Array.from({ length: 12 }).map((item, index) => obj[index+1] || null);}
+    var ar=convert({1:222, 2:123, 5:888})
+    console.log(ar)
+</script>
+</html>

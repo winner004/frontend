@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+    .box1{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        font-size: 16px;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="box1">ff</div>
+    </div>
+</body>
+<script>
+//     行内元素与块级元素的区别？
+//     HTML4 中，元素被分成两大类：inline （内联元素）与 block （块级元素）。（这里的行内元素指的是内联元素，不包括行内块inline-block）
+//     （1） 格式上，默认情况下，行内元素不会以新行开始，而块级元素会新起一行。
+//     （2） 内容上，通常情况下，行内元素只能包含文本和其他行内元素。而块级元素可以 包含行内元素和其他块级元素。
+//     （3） 行内元素与块级元素属性的不同，主要是盒模型属性上：行内元素设置 width 无 效，
+//           height 无效（可以设置 line-height），设置 margin 和 padding 的上下不会对其他元素 产生影响。
+//
+// 用自己的话总结就是如下几点：   是否换行   宽高是否有效  margin和padding是否有效     里面一般包含什么内容
+</script>
+</html>

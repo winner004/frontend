@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 100%;
+        height: 300px;
+        background-color: #00b8d6;
+        margin: 10px;
+        color: #000;
+    }
+    .box1{
+        width: 100%;
+        height: 300px;
+        background-color: red;
+        margin: 10px;
+        color: #000;
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+<script>
+    // https://www.jb51.net/article/104047.htm
+    // https://www.cnblogs.com/bldf/p/7193329.html
+    // var box=document.getElementsByClassName(".box")  box这里前面不加点！！！
+
+    var box=document.getElementsByClassName("box")
+    var box1=document.getElementsByClassName("box1")
+    document.addEventListener('scroll',function () {
+        var visibleBottom=document.documentElement.clientHeight+window.scrollY;
+        var visibleTop=window.scrollY
+        // offsetTop  ： 应该是当前元素顶部距离最近的"设置了position属性的"父元素的距离，如果没有设置的话就是针对于body顶部的距离
+        // 这里的每一个box对应的offsetTop是不会随scroll变化的值，但每一个的offsetTop当然也是不一样的值
+        // console.log(box1[0].offsetTop)
+        for(var i=0;i<box.length;i++){
+            var centerY=box[i].offsetTop+(box[i].offsetHeight/2)
+            if(centerY>visibleTop&&centerY<visibleBottom){
+                box[i].innerHTML='在可视区域'
+            }else {
+                box[i].innerHTML=''
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=" utf-8">
+    <meta name="author" content="https://www.maomao365.com/" />
+    <title>猫猫教程(www.maomao365.com)
+        ---clientLeft属性值的举例分享
+    </title>
+    <style >
+        #container{
+            width:120px;
+            height:50px;
+            line-height:50px;
+            border :18px solid gray;
+            padding-left:7px;
+            padding-right:6px;
+            text-align :center;
+            font-size:12px;
+            color:white;font-weight:bold;
+            background-color:blue;
+        }
+    </style>
+    <script>
+        // DOM之clientLeft属性值功能说明:
+        // clientLeft属性值用于返回一个DOM元素的左边框的宽度(即border-left的宽度)
+        // DOM之clientLeft属性值注意事项:
+        // 1.此属性是一个只读属性
+        // 2.clientLeft信息返回值是一个数值，无任何单位(缺省单位为像素)
+        // 3.当一个dom元素中其css display中属性值为none,则clientLeft返回值为0
+        // 4.clientLeft返回值会自动进行四舍五入取整,如实际值是380.5,则返回值381
+        window.onload =function() {
+            let oDiv=document.getElementById("container");
+            oDiv.innerHTML=oDiv.clientLeft;
+        }
+    </script>
+</head>
+<body>
+<p>maomao365.com <br />
+    clientLeft = border-left;
+    <br />
+</p>
+<div id="container"></div>
+</body>
+</html>
