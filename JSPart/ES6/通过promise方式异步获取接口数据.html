@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 定义获取新闻的功能函数
+    function getNews(url) {
+        //  ====== new Promise时 P要大写 =====
+        let promise=new Promise((resolve,reject)=>{
+            //执行异步任务
+            //创建xmlHTTP实例对象 发送ajax请求
+            // ======== 是request不是Requset！！！ ======
+            let xmlHTTP=new XMLHttpRequest();
+            //绑定监听readystate
+            xmlHTTP.onreadystatechange=function () {
+                if(xmlHTTP.readyState===4&&xmlHTTP.status==200){
+                    //请求成功
+                    console.log(xmlHTTP.responseText);
+                    resolve(xmlHTTP.responseText);
+                }else {
+                    reject('暂时没有新闻')
+                }
+            }
+            xmlHTTP.open('GET',url);
+            xmlHTTP.send();
+        })
+        return promise
+    }
+
+    getNews('https://localhost:3000/news?id=3').then((data)=>{
+        console.log(data)
+        //请求评论内容url
+        let commentsUrl=JSON.parse(data).commentUrl
+        let url='https://localhost:3000/'+commentsUrl
+        return getNews(url)
+        },(error)=>{
+        console.log(error)
+        }).then(()=>{},()=>{})//返回的getNews又进行链式调用
+
+</script>
+</html>
