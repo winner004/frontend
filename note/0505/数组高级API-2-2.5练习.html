@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 1.将一个字符串数组输出为|分割的形式，比如“刘备|张飞|关羽”。使用两种方式实现
+    var arr=['刘备','张飞','关羽']
+    //方法一
+    // str1=arr.join('|')   //好像不会改变原数组，是返回值，需要一个变量来接
+    // console.log(arr)
+    // console.log(str1)
+    // console.log('----')
+    // console.log(arr.join('|') )
+    // document.write(arr.join('|') )
+    //方法二
+    // var str1=''
+    // // arr.map((item,index)=>{
+    // arr.forEach((item,index)=>{
+    //     if(index==arr.length-1){
+    //         str1=str1+item
+    //     }else {
+    //         str1=str1+item+'|'
+    //     }
+    // })
+    // console.log(str1)
+    //方法三
+    // var str1 = ''
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (i == arr.length - 1) {
+    //         str1 = str1 + arr[i]
+    //     } else {
+    //         str1 = str1 + arr[i] + '|'
+    //     }
+    // }
+    // console.log(str1)
+    // 2.将一个字符串数组的元素的顺序进行反转。["a","b","c","d"] ["d","c","b","a"]。使用两种种方式实现。提示：第i个和第length-i-1个进行交换
+    var arr1=["a","b","c","d"]
+    //方法一
+    // var reverseArr=arr1.reverse(arr1)
+    // console.log(reverseArr)
+    //方法二
+    // for(let i = 0;i<arr1.length/2;i++){
+    //     let temp=arr1[i]
+    //     arr1[i]=arr1[arr1.length-1-i]
+    //     arr1[arr1.length-1-i]=temp
+    // }
+    // console.log(arr1)
+    // arr1.forEach ( item => {
+    //     document.write(item+",");
+    // })
+
+    // 3.找到数组中每个字母出现的次数["c","a","z","a","a"]
+   // var arr3=["c","a","z","a","a"]
+   //  var calc=[]
+   //  arr3.forEach(item=>{
+   //      if(calc[item]==undefined){
+   //          calc[item]=1
+   //      }else {
+   //          calc[item]=calc[item]+1
+   //      }
+   //  })
+   //  console.log(calc)
+    // 4.工资的数组[1500,1200,2000,2100,1800],把工资超过2000的删除
+    // var arr4=[1500,1200,2000,2100,1800]
+    // var filterArr=arr4.filter(item => {
+    //     return item<=2000
+    // })
+    // // var filterArr=arr4.filter(function (item){
+    // //     return item<=2000
+    // // })
+    // console.log(filterArr)
+</script>
+</html>
