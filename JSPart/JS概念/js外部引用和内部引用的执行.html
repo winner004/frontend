@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<buttom id="btn">点击</buttom>
+</body>
+//同时在外部文件和内部文件有相同函数，会执行后面一个。
+<script src="js外部引用和内部引用的执行.js"></script>
+<script>
+    let btn1=document.getElementById("btn")
+    btn1.onclick=function () {
+        test()
+    }
+    function test() {
+        console.log('in')
+    }
+</script>
+</html>
