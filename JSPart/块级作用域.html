@@ -9,14 +9,42 @@
 </head>
 <body>
 
+<button id="button1">Button1</button>
+<button id="button2">Button2</button>
+<button id="button3">Button3</button>
+
 </body>
 <script>
-    {
-        let a=1
+    // https://blog.csdn.net/yueguanghaidao/article/details/9568071
+    function buttonInit(){
+        for(var i=1;i<4;i++){
+            // const ii=i;  //分别弹出button1，button2，button3
+            // var  ii=i;  //都弹出button3
+            var b=document.getElementById("button"+i);
+            // b.addEventListener("click",function(){ alert("Button"+ii);},false);
+            b.addEventListener("click",function(){ alert("Button"+i);},false);
+        }
     }
-    {
-        const a=2
-    }
-    console.log(window.a)
+    window.οnlοad=buttonInit();
+// ==============================
+    // {
+    //     let a=1
+    // }
+    // {
+    //     const a=2
+    // }
+    // console.log(window.a)  //undefined
+// =====================
+    // function t(flag){
+    //     if(flag){
+    //         // var s="ifscope"; //下面 console.log(s)会显示 Uncaught ReferenceError: s is not defined
+    //         s="ifscope";  //下面 console.log(s)会显示"ifscope"  因为 没有用var声明的变量都是全局变量，而且是顶层对象的属性  所以你用console.log(window.s)也是会输出“ifconfig"
+    //         for(var i=0;i<2;i++)
+    //             ;
+    //     }
+    //     console.log(i);
+    // }
+    // t(true);
+    // console.log(s);
 </script>
 </html>

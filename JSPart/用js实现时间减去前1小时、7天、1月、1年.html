@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    var sdtime1 = new Date('2018-03-22 16:14:55')
+    var sdtime2 = sdtime1.setHours(sdtime1.getHours() -1)  //sdtime1时间的前推1小时
+    var sdtime3=new Date().setDate((new Date().getDate()-7))  //  当前时间的前推7天
+    var sdtime4=new Date().setMonth((new Date().getMonth()-1))   //当前时间的前推一个月
+    var sdtime5=new Date().setFullYear((new Date().getFullYear()-1))   //当前时间的前推一年
+    // console.log(new Date(sdtime2).Format("yyyy-MM-dd HH:mm:ss"));
+
+    //结果是个时间戳
+    console.log(sdtime2);
+    console.log(sdtime3);
+    console.log(sdtime4);
+    console.log(sdtime5);
+</script>
+</html>

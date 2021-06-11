@@ -11,6 +11,10 @@
 
 </body>
 <script>
+    // 1.字面量
+    // 2.new object()
+    // 3.es5新增  var obj = Object.create({})  https://blog.csdn.net/u013513053/article/details/80612421
+
     // 字面量的方式  属性用冒号链接的
     // var person={
     //     name:"张三",
@@ -37,5 +41,21 @@
         }
     }
     var p1=new person("王五",12)
+
+    //使用工厂模式创建对象
+    // function createPerson(name,age,job){
+    // var o = new Object();
+    // o.name = name;
+    // o.age = age;
+    // o.job = job;
+    // o.sayName = function(){
+    //     alert(this.name);
+    // };
+    // return o;
+    // }
+    // var person1 = createPerson('Nike',29,'teacher');
+    // var person2 = createPerson('Arvin',20,'student');
+
+    //https://www.jb51.net/article/107012.htm
 </script>
 </html>
