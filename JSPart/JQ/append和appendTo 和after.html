@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1">haha</div>
+</body>
+
+<script src="../../jquery-1.11.1.min.js"></script>
+<script>
+    //append 是插入到元素里面
+    //     $('#box1').append('a')
+    //     $("<div>b</div>").appendTo('#box1')  //$(被插入内容).appendTo(selector)  而且被插入内容必须包含 HTML 标签
+
+    //插入到元素外面后面
+    // $("#box1").after("a");
+    $("<span>Hello world!</span>").insertAfter("#box1");    //$(被插入内容).insertAfter(selector)  而且被插入内容是 选择器表达式或者 HTML 标签
+</script>
+</html>
